@@ -8,3 +8,21 @@ html {
 h1, h2 {
   text-align: center;
 }
+.bc {
+  margin: auto;
+  width: 80%;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 6px; 
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+a:link {
+  color: #09f;
+}
+a:visited {
+  color: cyan; /* purple on black 😋😋😋 */
+}
+a:active {
+  color: red;
+}
