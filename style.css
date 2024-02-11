@@ -2,11 +2,8 @@ html {
   height: 100%;
   width: 100%;
   font-family: "MS Gothic";
-  background: black;
+  background: #000077;
   color: white;
-  background: black url("./images/tile.png") repeat;
-  animation: scroll16pxbg 10s infinite;
-  animation-timing-function: linear;
 }
 h1, h2 {
   text-align: center;
@@ -48,4 +45,23 @@ hr {
     background-position-x: 16px;
     background-position-y: 16px;
   }
+}
+table,th , td{
+  border: 2px solid white;
+}
+table{
+  width: 100%;
+}
+td{
+  padding: 5px;
+  width: 33px;
+}
+tr:nth-child(even){
+  background-color: #000396;
+}
+tr:nth-child(odd){
+  background-color: #000132;
+}
+th {
+  padding: 10px;
 }
