@@ -19,7 +19,7 @@ if (web[web.length - 3] == "archived") { // means its in a folder thats in /arch
 web = "/"+web.join("/")+"/";
 var webb = document.createElement("span");
 webb.innerText = web;
-document.body.appendChild(webb);
+if (folder != null) document.body.appendChild(webb);
 if (folder) {
   var table = document.createElement("table");
   let row = table.insertRow(-1);
