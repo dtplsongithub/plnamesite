@@ -4,9 +4,13 @@ html {
   font-family: "MS Gothic";
   background: black;
   color: white;
+  background: black url("./images/tile.png") repeat;
+  animation: scroll16pxbg 10s infinite;
+  animation-timing-function: linear;
 }
 h1, h2 {
   text-align: center;
+  text-shadow: 3px 3px 3px #ffffffaa;
 }
 .bc {
   margin: auto;
@@ -16,13 +20,32 @@ h1, h2 {
   border-radius: 6px; 
   margin-top: 15px;
   margin-bottom: 15px;
-}
-a:link {
-  color: #09f;
+  background: #00000077;
+  animation: lightglow 5s infinite;
+  animation-timing-function: linear;
 }
 a:visited {
   color: cyan; /* purple on black 😋😋😋 */
 }
 a:active {
   color: red;
+}
+hr {
+  border: 1px solid white;
+}
+
+@keyframes lightglow {
+  0% {box-shadow: 0px 0px 15px #ffffff;}
+  50% {box-shadow: 0px 0px 20px #ffffff;}
+  100% {box-shadow: 0px 0px 15px #ffffff;}
+}
+@keyframes scroll16pxbg {
+  0% {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  100% {
+    background-position-x: 16px;
+    background-position-y: 16px;
+  }
 }
