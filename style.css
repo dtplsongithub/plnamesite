@@ -1,12 +1,17 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: "MS Gothic";
   background: #000077;
   color: white;
 }
+html, input, button {
+  font-family: "MS Gothic", "Courier New";
+}
 h1, h2 {
   text-align: center;
+  text-shadow: 3px 3px 3px #ffffffaa;
+}
+h3 {
   text-shadow: 3px 3px 3px #ffffffaa;
 }
 .bc {
@@ -22,7 +27,7 @@ h1, h2 {
   animation-timing-function: linear;
 }
 a:visited {
-  color: cyan; /* purple on black 😋😋😋 */
+  color: cyan;
 }
 a:active {
   color: red;
@@ -64,4 +69,25 @@ tr:nth-child(odd){
 }
 th {
   padding: 10px;
+}
+.center {
+  text-align: center;
+}
+button {
+  padding: 5px;
+  background: #ddd;
+  border-right: 3px solid#aaa;
+  border-bottom: 3px solid#aaa;
+  border-top: 3px solid#fff;
+  border-left: 3px solid#fff;
+}
+button:hover {
+  background: #fff;
+}
+button:active {
+  background: #ddd;
+  border-left: 3px solid#aaa;
+  border-top: 3px solid#aaa;
+  border-bottom: 3px solid#fff;
+  border-right: 3px solid#fff;
 }

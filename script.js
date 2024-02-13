@@ -1,7 +1,7 @@
 const files = {
   "beta4": {
     "v0.4.2-beta-2-win-amd64-lite": 5019391,
-    "v0.4.2-beta-3-win-amd64": 5033126
+    "v0.4.2-beta-3-win-amd64": 5033126,
   }
 }
 
@@ -26,17 +26,20 @@ if (folder) {
   row.insertCell(0).innerText = "Version name";
   row.insertCell(1).innerText = "Size";
   for (i in Object.keys(files[folder])) {
-    let row = table.insertRow(-1);
-    row.insertCell(0).innerHTML = `<a href="${Object.keys(files[folder])[i]}.zip">${Object.keys(files[folder])[i]}.zip</a>`;
-    row.insertCell(1).innerText = (files[folder][Object.keys(files[folder])[i]]/1024/1024).toFixed(2) + " MB";
+    if (typeof Object.keys(files[folder])[i] == "number") {
+      let row = table.insertRow(-1);
+      row.insertCell(0).innerHTML = `<a href="${Object.keys(files[folder])[i]}.zip">${Object.keys(files[folder])[i]}.zip</a>`;
+      row.insertCell(1).innerText = (files[folder][Object.keys(files[folder])[i]]/1024/1024).toFixed(2) + " MB";
+    } else {
+      let row = table.insertRow(-1);
+      row.insertCell(0).innerHTML = `<a href="./${Object.keys(files)[i]}/">${Object.keys(files)[i]}</a>`;
+    }
   }
   document.body.appendChild(table);
 } else if (folder != null) {
   var table = document.createElement("table");
-  let row = table.insertRow(-1);
   for (i in Object.keys(files)) {
-    let row = table.insertRow(-1);
-    row.insertCell(0).innerHTML = `<a href="./${Object.keys(files)[i]}/">${Object.keys(files)[i]}</a>`;
+    
   }
   document.body.appendChild(table);
 }
