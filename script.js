@@ -2,6 +2,7 @@ const files = {
   "beta4": {
     "v0.4.2-beta-2-win-amd64-lite": 5019391,
     "v0.4.2-beta-3-win-amd64": 5033126,
+    "v0.4.2-beta-4-win-amd64": 5016921,
   }
 }
 
@@ -26,8 +27,13 @@ if (folder) {
   row.insertCell(1).innerText = "Size";
   for (i in Object.keys(files[folder])) {
       let row = table.insertRow(-1);
+    if (typeof files[folder][Object.keys(files[folder])[i]] == "object") {
+      row.insertCell(0).innerHTML = `<a href="./${Object.keys(files[folder])[i]}/">${Object.keys(files[folder])[i]}</a>`;
+      row.insertCell(1).innerHTML = `Folder`;
+    } else {
       row.insertCell(0).innerHTML = `<a href="${Object.keys(files[folder])[i]}.zip">${Object.keys(files[folder])[i]}.zip</a>`;
       row.insertCell(1).innerText = (files[folder][Object.keys(files[folder])[i]]/1024/1024).toFixed(2) + " MB";
+    }
   }
   document.body.appendChild(table);
 } else if (folder != null) {
