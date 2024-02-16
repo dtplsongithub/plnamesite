@@ -3,6 +3,7 @@ const files = {
     "v0.4.2-beta-2-win-amd64-lite": 5019391,
     "v0.4.2-beta-3-win-amd64": 5033126,
     "v0.4.2-beta-4-win-amd64": 5016921,
+    "v0.4.2-beta-5-win-amd64": 5018622
   }
 }
 
